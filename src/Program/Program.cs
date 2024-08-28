@@ -6,12 +6,12 @@ namespace Ucu.Poo.GameOfLife
     {
         static void Main()
         {
-            FileRider fileRider = new FileRider();
+            FileReader fileRider = new FileReader();
             bool[,] initialBoard = fileRider.LeerArchivo("board.txt");
             Board board = new Board(initialBoard);
             Logic nuevaGeneracion = new Logic();
             PrintBoard printBoard = new PrintBoard(board, nuevaGeneracion);
 
-            printBoard.ImprimirContinuamente();
+            printBoard.ImprimirContinuamente(); 
         }
 }
