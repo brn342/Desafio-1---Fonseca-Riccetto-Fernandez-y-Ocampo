@@ -42,7 +42,7 @@ namespace Ucu.Poo.GameOfLife
                 }
 
                 Console.WriteLine(s.ToString());
-                _board.SetBoard(_nuevaGeneracion.CalcularSiguienteGeneracion(b));
+                _nuevaGeneracion.NextGen(_board);
                 Thread.Sleep(300);
             }
         }

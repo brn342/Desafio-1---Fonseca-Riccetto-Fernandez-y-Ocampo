@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Threading;
 
 namespace Ucu.Poo.GameOfLife
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            FileReader fileRider = new FileReader();
-            bool[,] initialBoard = fileRider.LeerArchivo("board.txt");
-            Board board = new Board(initialBoard);
-            Logic nuevaGeneracion = new Logic();
-            PrintBoard printBoard = new PrintBoard(board, nuevaGeneracion);
+            // Crear una instancia de FileReader para leer el tablero desde un archivo
+            FileReader fileReader = new FileReader();
+            Board initialBoard = fileReader.Read();
 
-            printBoard.ImprimirContinuamente(); 
+            // Crear la lógica para calcular la siguiente generación
+            Logic logic = new Logic();
+
+            // Crear la clase para imprimir el tablero
+            PrintBoard printBoard = new PrintBoard(initialBoard, logic);
+
+            // Iniciar la impresión continua del tablero y el cálculo de las generaciones
+            printBoard.ImprimirContinuamente();
         }
+    }
 }
