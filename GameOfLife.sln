@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3567F41-15CF-4C7A-A494-9F72DE01D942}"
+	ProjectSection(SolutionItems) = preProject
+		src\Logic.cs = src\Logic.cs
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\Program\Program.csproj", "{622EBE15-015C-4F7E-ABBF-390B7DCFB2F1}"
 EndProject
