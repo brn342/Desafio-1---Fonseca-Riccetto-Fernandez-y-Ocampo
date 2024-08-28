@@ -1,6 +1,6 @@
 namespace Program;
 using System.IO;
-public class File_Reader
+public class FileReader
 {
     public Board Read()
     {
